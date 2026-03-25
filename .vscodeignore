@@ -1,0 +1,9 @@
+node_modules/
+src/
+*.vsix
+.vscode-test/
+.vscode/
+tsconfig.json
+esbuild.mjs
+.gitignore
+CHANGELOG.md
