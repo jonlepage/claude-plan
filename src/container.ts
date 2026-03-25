@@ -1,5 +1,11 @@
-import type * as vscode from "vscode";
-import { LoggerService, SelectionService, AnnotationService, CommunicationService } from "./services";
+import * as vscode from "vscode";
+import {
+  LoggerService,
+  SelectionService,
+  AnnotationService,
+  CommunicationService,
+  DecorationService,
+} from "./services";
 import { registerCommands } from "./commands";
 import { DisposableCollection } from "./utils";
 
@@ -15,12 +21,24 @@ export function createContainer(context: vscode.ExtensionContext): Container {
   const selectionService = new SelectionService(logger);
   const annotationService = new AnnotationService(logger);
   const communicationService = new CommunicationService(logger);
+  const decorationService = disposables.add(
+    new DecorationService(logger, selectionService, annotationService),
+  );
+
+  disposables.add(
+    vscode.window.onDidChangeActiveTextEditor((editor) => {
+      if (editor) {
+        decorationService.refreshDecorations(editor);
+      }
+    }),
+  );
 
   registerCommands(context, {
     logger,
     selectionService,
     annotationService,
     communicationService,
+    decorationService,
   });
 
   return {

@@ -35,4 +35,9 @@ export class AnnotationService implements IAnnotationService {
     this.logger.info(`Annotation ${id} removed.`);
     return true;
   }
+
+  clearAnnotations(): void {
+    this.annotations.length = 0;
+    this.logger.info("All annotations cleared.");
+  }
 }

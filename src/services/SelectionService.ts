@@ -29,6 +29,20 @@ export class SelectionService implements ISelectionService {
     return selection;
   }
 
+  registerSelection(filePath: string, startLine: number, endLine: number, text: string): Selection {
+    const selection: Selection = {
+      id: randomUUID(),
+      filePath,
+      startLine,
+      endLine,
+      text,
+      timestamp: Date.now(),
+    };
+    this.selections.push(selection);
+    this.logger.info(`Selection registered: ${filePath}:${startLine}-${endLine}`);
+    return selection;
+  }
+
   getSelections(): ReadonlyArray<Selection> {
     return this.selections;
   }

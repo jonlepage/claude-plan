@@ -3,7 +3,8 @@ src/
 *.vsix
 .vscode-test/
 .vscode/
+.claude/
 tsconfig.json
 esbuild.mjs
 .gitignore
-CHANGELOG.md
+package-lock.json
