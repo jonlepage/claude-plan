@@ -2,7 +2,7 @@
   "name": "claude-plan",
   "displayName": "Claude Plan — Annotate & Review AI Plans",
   "description": "Annotate markdown plans in preview mode with directives, then send feedback to Claude Code in one click. Select text or hover lines to add notes, review inline, and iterate faster on AI-generated plans.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "lepasoft-dev",
   "license": "MIT",
   "icon": "media/icon.png",
