@@ -4,7 +4,7 @@
 
 Claude Plan bridges the gap between reading an AI-generated plan and giving structured feedback. Instead of typing long instructions, simply select the parts you want changed, add directives, and send everything to Claude Code — preserving your conversation context.
 
-![Claude Plan preview](https://github.com/lepasoft/claude-plan/raw/master/preview.jpg)
+![Claude Plan preview](https://github.com/jonlepage/claude-plan/raw/master/preview.jpg)
 
 ## Features
 
