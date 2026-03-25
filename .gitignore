@@ -5,3 +5,4 @@ release/
 .vscode-test/
 .DS_Store
 Thumbs.db
+.claude/
